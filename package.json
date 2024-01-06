@@ -5,7 +5,9 @@
   "author": "",
   "private": true,
   "license": "UNLICENSED",
+  "bin": "dist/main.js",
   "scripts": {
+    "deploy": "npm run build && pkg . -t node18-linux-x64 -o app-linux && node ./scripts/deploy.js",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
